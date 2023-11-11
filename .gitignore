@@ -1,0 +1,41 @@
+# Ignore build output
+build/
+bin/
+
+# Ignore IDE files
+.idea/
+*.iml
+
+# Ignore CMake files
+cmake-build-debug/
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles/
+
+# Ignore test output
+test/bin/
+test/build/
+
+# Ignore executables
+*.exe
+*.out
+
+# Ignore object files
+*.o
+*.obj
+
+# Ignore libraries
+*.lib
+*.a
+*.so
+*.dylib
+
+# Ignore temporary files
+*.tmp
+*.temp
+
+# Ignore log files 
+*.log
+
+# Ignore compiled python files
+*.pyc
