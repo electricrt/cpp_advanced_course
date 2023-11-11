@@ -1,0 +1,56 @@
+OVERALL ASSIGNMENT RUBRIC
+A. Correctness and Efficiency: 3 points possible
+
+0 pts
+Mostly incorrect
+
+1 pt
+Partly correct
+
+2 pts
+Correct but inefficient
+
+3 pts
+Correct and efficient
+B. Documentation: 2 points possible
+
+0 pts
+No documentation
+
+1 pt
+Mediocre documentation
+
+2 pts
+Well documented
+C. Understandable identifier names: 1 point possible
+
+0 pts
+Identifier names NOT understandable
+
+1 pt
+Understandable identifier names
+D. Proper Indentation and Formatting of Code: 1 point possible
+
+0 pts
+Code was NOT properly indented and formatted
+
+1 pt
+Code was properly indented and formatted
+E. Code has good encapsulation as in functions and classes: 1 point possible
+
+0 pts
+Code does NOT have good encapsulation as in functions and classes
+
+1 pt
+Code has good encapsulation as in functions and classes
+F. Code meets all criteria at a high standard: 2 points possible
+
+0 pts
+Code does NOT meet assignment criteria
+
+1 pt
+Code meets all criteria but is mediocre
+
+2 pts
+Code meets all criteria at a high standard
+Please offer a brief remark on each category above as an overall evaluation for this Homework, as well as any additional comments you have for this student.
