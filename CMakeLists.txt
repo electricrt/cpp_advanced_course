@@ -25,6 +25,8 @@ add_executable(UCSC
         week3/src/common.h
         week3/src/debug.cpp
         week3/src/debug.h
+        week3/lib/monteCarloSim/src/monteCarloSim.cpp
+        week3/lib/monteCarloSim/src/monteCarloSim.h
 )
 
 
