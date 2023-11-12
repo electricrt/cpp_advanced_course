@@ -19,14 +19,18 @@ add_definitions(-DDEBUG_MODE)
 
 add_executable(UCSC
         week3/src/main.cpp
-        week3/src/graph.cpp
-        week3/src/graph.h
-        week3/src/graph.cpp
+        week3/lib/graph/src/graph.cpp
+        week3/lib/graph/src/graph.h
+        week3/lib/graph/src/graph.cpp
         week3/src/common.h
-        week3/src/debug.cpp
-        week3/src/debug.h
+        week3/lib/debug/src/debug.cpp
+        week3/lib/debug/src/debug.h
         week3/lib/monteCarloSim/src/monteCarloSim.cpp
         week3/lib/monteCarloSim/src/monteCarloSim.h
+        week3/lib/integration/src/integration.cpp
+        week3/lib/integration/src/integration.h
+        week3/lib/runtime_parameters/src/runtime_parameters.cpp
+        week3/lib/runtime_parameters/src/runtime_parameters.h
 )
 
 
@@ -53,8 +57,8 @@ target_include_directories(imgui_demo
 add_executable(unit_test_ucsc
         week3/tests/main_test.cpp
         week3/tests/main_test.h
-        week3/src/graph.cpp
-        week3/src/graph.h
+        week3/lib/graph/src/graph.cpp
+        week3/lib/graph/src/graph.h
         week3/src/common.h
 )
 

@@ -11,7 +11,7 @@
  */
 #include "main_test.h"
 
-#include "graph.h"
+#include "../lib/graph/src/graph.h"
 #include "common.h"
 #include <gtest/gtest.h>
 

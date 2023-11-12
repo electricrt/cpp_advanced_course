@@ -3,7 +3,7 @@
 //
 
 #include "monteCarloSim.h"
-#include "graph.h"
+#include "../../graph/src/graph.h"
 
 namespace mcm {
     MonteCarloSimulation::MonteCarloSimulation(int numVertices, double minDistance, double maxDistance) {
