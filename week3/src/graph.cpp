@@ -5,13 +5,25 @@
 #include <random>
 #include "graph.h"
 #include "common.h"
+#include <stdexcept> // Include for std::runtime_error
+#include <iostream>
 
 
 Graph::Graph(int vertices) {
-    numVertices = vertices;
-    adjMatrix.resize(vertices, std::vector<double>(vertices, MAX_DISTANCE));
-    for (int i = 0; i < vertices; ++i) {
-        adjMatrix[i][i] = 0; // Distance to itself is 0
+    try {
+        if (vertices <= 0) {
+            throw std::runtime_error("Number of vertices must be positive.");
+        }
+
+        numVertices = vertices;
+        adjMatrix.resize(vertices, std::vector<double>(vertices, MAX_DISTANCE));
+        for (int i = 0; i < vertices; ++i) {
+            adjMatrix[i][i] = 0; // Distance to itself is 0
+        }
+    } catch (const std::runtime_error& e) {
+        std::cerr << "Error in Graph constructor: " << e.what() << std::endl;
+        // Handle the error or rethrow to be handled at a higher level
+        throw; // Rethrow the exception if you want to handle it outside the constructor
     }
 }
 

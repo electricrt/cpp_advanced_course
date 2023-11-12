@@ -15,6 +15,7 @@ FetchContent_MakeAvailable(googletest)
 enable_testing()
 
 include_directories(week3/src)
+add_definitions(-DDEBUG_MODE)
 
 add_executable(UCSC
         week3/src/main.cpp
@@ -22,7 +23,11 @@ add_executable(UCSC
         week3/src/graph.h
         week3/src/graph.cpp
         week3/src/common.h
+        week3/src/debug.cpp
+        week3/src/debug.h
 )
+
+
        # week3/src/main.h)
 add_executable(imgui_demo
         imgui/examples/Dijkstra_gui/main.cpp
