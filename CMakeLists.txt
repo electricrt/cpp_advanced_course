@@ -17,5 +17,41 @@ enable_testing()
 include_directories(week3/src)
 
 add_executable(UCSC
-        week3/src/main.cpp)
+        week3/src/main.cpp
+        week3/src/graph.cpp
+        week3/src/graph.h
+        week3/src/graph.cpp
+        week3/src/common.h
+)
        # week3/src/main.h)
+add_executable(imgui_demo
+        imgui/examples/Dijkstra_gui/main.cpp
+        imgui/imgui.cpp
+        imgui/imgui_demo.cpp
+        imgui/imgui_draw.cpp
+        imgui/imgui_widgets.cpp
+        imgui/imgui_tables.cpp
+        imgui/backends/imgui_impl_opengl3.cpp
+        imgui/backends/imgui_impl_glfw.cpp
+
+        #imgui/examples/libs/glfw/include/GLFW/glfw3.h
+    )
+
+target_include_directories(imgui_demo
+        PRIVATE imgui
+        PRIVATE imgui/backends
+        PRIVATE imgui/examples/libs/glfw/include)
+
+# Now simply link against gtest or gtest_main as needed. Eg
+add_executable(unit_test_ucsc
+        week3/tests/main_test.cpp
+        week3/tests/main_test.h
+        week3/src/graph.cpp
+        week3/src/graph.h
+        week3/src/common.h
+)
+
+
+target_link_libraries(unit_test_ucsc gtest_main)
+enable_testing()
+add_test(NAME unit_test_ucsc COMMAND unit_test_ucsc)
