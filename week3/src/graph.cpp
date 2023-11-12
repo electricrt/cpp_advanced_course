@@ -1,10 +1,11 @@
 //
 // Created by Alan Hu on 11/11/23.
 //
-
+#include <queue>
+#include <random>
 #include "graph.h"
 #include "common.h"
-#include <queue>
+
 
 Graph::Graph(int vertices) {
     numVertices = vertices;
@@ -14,6 +15,10 @@ Graph::Graph(int vertices) {
     }
 }
 
+int Graph::getNumVertices() {
+    return numVertices;
+}
+
 void Graph::addEdge(int start, int end, double distance) {
     adjMatrix[start][end] = distance;
     adjMatrix[end][start] = distance; // For undirected graph
@@ -21,6 +26,8 @@ void Graph::addEdge(int start, int end, double distance) {
 
 void Graph::generateRandomGraph(double density, double minDistance, double maxDistance) {
     srand(time(nullptr)); // Seed for random number generation
+    // Other random number generation code
+    std::random_device rd;
     for (int i = 0; i < numVertices; ++i) {
         for (int j = i + 1; j < numVertices; ++j) {
             double prob = (double) rand() / RAND_MAX;
@@ -76,6 +83,14 @@ double Graph::averageShortestPath() {
     }
 
     return count > 0 ? totalDistance / count : 0;
+}
+
+double Graph::edgeDistance(int start, int end) const {
+    if (start < 0 || start >= numVertices || end < 0 || end >= numVertices) {
+        // Handle invalid indices, perhaps throw an exception or return a special value
+        return -1; // Example: return -1 to indicate an error
+    }
+    return adjMatrix[start][end];
 }
 
 
