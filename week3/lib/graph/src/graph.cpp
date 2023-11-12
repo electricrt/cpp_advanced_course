@@ -27,7 +27,7 @@ Graph::Graph(int vertices) {
     }
 }
 
-int Graph::getNumVertices() {
+int Graph::getNumVertices() const {
     return numVertices;
 }
 
@@ -40,6 +40,7 @@ void Graph::generateRandomGraph(double density, double minDistance, double maxDi
     srand(time(nullptr)); // Seed for random number generation
     // Other random number generation code
     std::random_device rd;
+
     for (int i = 0; i < numVertices; ++i) {
         for (int j = i + 1; j < numVertices; ++j) {
             double prob = (double) rand() / RAND_MAX;

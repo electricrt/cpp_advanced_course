@@ -9,10 +9,8 @@
  * Date: 11/11/23
  * Course: C++ For C Programmers, Part A
  */
-#include "main_test.h"
 
 #include "../lib/graph/src/graph.h"
-#include "common.h"
 #include <gtest/gtest.h>
 
 // Test the constructor
@@ -57,8 +55,8 @@ Graph g(5);
 double averagePath = g.averageShortestPath();
 // Check the average path length against an expected value
 }
-
+/*
 int main(int argc, char **argv) {
     ::testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
-}
+}*/

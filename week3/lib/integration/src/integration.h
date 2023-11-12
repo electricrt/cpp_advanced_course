@@ -6,6 +6,6 @@
 #define UCSC_INTEGRATION_H
 
 int run_graph();
-
+int run_monteCarloSim();
 
 #endif //UCSC_INTEGRATION_H

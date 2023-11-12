@@ -23,7 +23,7 @@ int main() {
 
         run_graph();
 
-
+        run_monteCarloSim();
         // Exception Handler
         } catch (const std::runtime_error& e) {
             std::cerr << "Failed to initialize graph: " << e.what() << std::endl;

@@ -20,7 +20,7 @@ public:
     // Dijkstra's algorithm to find shortest path
     std::vector<double> dijkstrasAlgorithm(int source);
     // getter for numVerices
-    int getNumVertices();
+    int getNumVertices() const;
     // Return distance between two vertices
     double edgeDistance(int start, int end) const;
     // Calculate average shortest path

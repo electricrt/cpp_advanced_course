@@ -55,14 +55,18 @@ target_include_directories(imgui_demo
 
 # Now simply link against gtest or gtest_main as needed. Eg
 add_executable(unit_test_ucsc
-        week3/tests/main_test.cpp
-        week3/tests/main_test.h
+        week3/tests/test_main.cpp
+        week3/tests/test_graph.cpp
+        week3/tests/test_montecarlo_sim.cpp
+
         week3/lib/graph/src/graph.cpp
         week3/lib/graph/src/graph.h
+        week3/lib/monteCarloSim/src/monteCarloSim.cpp
+        week3/lib/monteCarloSim/src/monteCarloSim.h
         week3/src/common.h
+
 )
-
-
 target_link_libraries(unit_test_ucsc gtest_main)
 enable_testing()
+
 add_test(NAME unit_test_ucsc COMMAND unit_test_ucsc)
