@@ -11,7 +11,9 @@
 
 class Graph {
 private:
-    std::vector <std::vector<double>> adjMatrix;
+    std::vector <std::vector<double>> adjMatrix; // Used for 2D Matrix
+    std::vector<double> adjArray; // Used for 1D Array
+
     int numVertices;
 
 public:
@@ -23,6 +25,8 @@ public:
     int getNumVertices() const;
     // Return distance between two vertices
     double edgeDistance(int start, int end) const;
+    //
+
     // Calculate average shortest path
     double averageShortestPath();
     // Add edge

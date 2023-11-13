@@ -22,12 +22,13 @@ int run_graph() {
 
     std::cout << "Initializing Graph with NUM_VERTICES: " << NUM_VERTICES << std::endl;
 
+    rt.setDensity(0.2);
     // Generate the graph with 20% density and distances between 1.0 and 10.0
     g.generateRandomGraph(rt.getDensity(), rt.getMinDistance(), rt.getMaxDistance());
 
     // Calculate average shortest path
     double avgPathLength = g.averageShortestPath();
-    std::cout << "Average Path Length at 20% density: " << avgPathLength << std::endl;
+    std::cout << "Average Shortest Path Length at 20% density: " << avgPathLength << std::endl;
 
     rt.setDensity(0.4);
     // Repeat for 40% density
@@ -35,7 +36,7 @@ int run_graph() {
 
     avgPathLength = g.averageShortestPath();
 
-    std::cout << "Average Path Length at 40% density: " << avgPathLength << std::endl;
+    std::cout << "Average Shortest Path Length at 40% density: " << avgPathLength << std::endl;
 
     return 0;
 

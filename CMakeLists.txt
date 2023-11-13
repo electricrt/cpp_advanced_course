@@ -70,3 +70,7 @@ target_link_libraries(unit_test_ucsc gtest_main)
 enable_testing()
 
 add_test(NAME unit_test_ucsc COMMAND unit_test_ucsc)
+add_executable(duc_solution_graph week3/solution/duc_graph.cpp
+        week3/lib/appstate/src/appstate.tpp
+        week3/lib/appstate/src/appstate.h)
+add_executable(new_graph week3/compare/sim_graph.cpp)

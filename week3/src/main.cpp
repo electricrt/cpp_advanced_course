@@ -13,18 +13,29 @@
 
 #include <iostream>
 #include "../lib/graph/src/graph.h"
-#include "../lib/debug/src/debug.h"
 #include "../lib/integration/src/integration.h"
 
+#include "common.h"
+#include "../lib/appstate/src/appstate.h"
+
+enum class mainState {
+    init_,
+    run_graph_completed,
+    run_monteCarloSim_completed,
+};
+
+ProgramStateClass<YourEnumType> stateMachine = ProgramStateClass<YourEnumType>(YourEnumType::init_);
 
 // Main function
 int main() {
     try {
-
-        run_graph();
-
+      //  stateMachine.setState(static_cast<initState>(mainState::init_));
+            run_graph();
+            stateMachine.setState(static_cast<YourEnumType>(mainState::run_graph_completed));
         run_monteCarloSim();
+        stateMachine.setState(static_cast<YourEnumType>(mainState::run_monteCarloSim_completed));
         // Exception Handler
+
         } catch (const std::runtime_error& e) {
             std::cerr << "Failed to initialize graph: " << e.what() << std::endl;
             return 1; // Return 1 to indicate error
